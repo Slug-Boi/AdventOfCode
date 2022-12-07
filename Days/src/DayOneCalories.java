@@ -10,13 +10,15 @@ public class DayOneCalories {
 
         int tempSum = 0;
         while(reader.hasNextLine()) {
-            if(reader.nextLine().equals("")) {
-               tempSum = Integer.parseInt(reader.nextLine()) + tempSum;
-            } else {
+            String temp = reader.nextLine();
+            if(temp.equals("")) { //Make this into a skip and then make another one to read input
                 caloriesSums.add(tempSum);
                 tempSum = 0;
+            } else {
+                tempSum = Integer.parseInt(temp) + tempSum;
             }
         }
+        reader.close();
 
         Collections.sort(caloriesSums);
         int size = caloriesSums.size() - 1;
