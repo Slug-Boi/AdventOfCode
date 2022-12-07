@@ -22,6 +22,12 @@ public class DayOneCalories {
 
         Collections.sort(caloriesSums);
         int size = caloriesSums.size() - 1;
+        //Part 1
         System.out.println(caloriesSums.get(size));
+
+        //Part 2
+        System.out.println(caloriesSums.get(size) + caloriesSums.get(size-1) + caloriesSums.get(size-2));
+
+
     }
 }
